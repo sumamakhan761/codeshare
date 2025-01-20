@@ -20,7 +20,7 @@ export default function Header() {
       <Home />
       {/* <Message /> */}
 
-        <div className={cn("flex items-center justify-center gap-5")}>
+        <div className={cn("flex items-center justify-center gap-3")}>
           <Social />
           <Help />
       {sessionStatus !== "loading" && (

@@ -6,11 +6,13 @@ type SerializedValue<T> =
 function serializeCustom<T>(_: string, value: T): SerializedValue<T> {
   if (value instanceof Date) {
     return { type: "Date", value: (value as Date).toJSON() };
-  }
+  }// new Date("2025-01-18")
+    // Serialized as: { type: "Date", value: "2025-01-18T00:00:00.000Z" }
 
   if (typeof value === "function") {
     return { type: "Function", value: value.toString() };
-  } 
+  } //function greet() { return "Hello!"; }
+  // Serialized as: { type: "Function", value: "function greet() { return 'Hello!'; }" }
 
   return value;
 }

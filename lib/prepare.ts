@@ -63,5 +63,6 @@ export function prepare(body: Partial<AppState>): Partial<PreparedAppState> {
   if (Object.keys(data).length > 0) {
     data.updatedAt = new Date().toISOString();
   }
+
   return data;
 }

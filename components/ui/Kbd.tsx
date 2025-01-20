@@ -3,7 +3,7 @@ import { Fragment } from "react";
 
 export default function Kbd({ keys }: { keys: string[] }) {
   return (
-    <div className={cn("flex items-center gap-1 -ml-3")}>
+    <div className={cn("flex items-center gap-1")}>
       {keys.map((key) => (
         <Fragment key={key}>
           <kbd

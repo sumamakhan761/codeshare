@@ -27,8 +27,8 @@ export async function snap(
 
   try {
     const options = {
-      width: editorDiv.clientWidth * 2.3,
-      height: editorDiv.clientHeight * 2.3,
+      width: editorDiv.clientWidth * 2,
+      height: editorDiv.clientHeight * 2,
       style: {
         maxWidth: "none",
         maxHeight: "none",

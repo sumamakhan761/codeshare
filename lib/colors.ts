@@ -8,8 +8,7 @@ function calculateLuminance(r: number, g: number, b: number): number {
     0.7152 * (g <= 0.03928 ? g / 12.92 : ((g + 0.055) / 1.055) ** 2.4) +
     0.0722 * (b <= 0.03928 ? b / 12.92 : ((b + 0.055) / 1.055) ** 2.4)
   );
-}// luminance of a color given its RGB components  text is readable against a background.
-
+}
 
 function calculateContrastRatio(
   r1: number,
@@ -23,7 +22,7 @@ function calculateContrastRatio(
   const l2 = calculateLuminance(r2, g2, b2);
 
   return l1 > l2 ? (l1 + 0.05) / (l2 + 0.05) : (l2 + 0.05) / (l1 + 0.05);
-} //the contrast ratio between two colors.
+}
 
 function hexToRgb(hex: string): number[] {
   hex = hex.replace(/^#/, "").replace(/[-.]/g, "");
@@ -76,7 +75,7 @@ function modifyColors(
   }
 
   return modifiedHslColors;
-} //Modifies the saturation and lightness of a list of HSL colors
+}
 
 function cssColorToRgb(cssColor: string): number[] {
   const matches = cssColor.match(
@@ -202,7 +201,7 @@ export function generateColors(colors: string[]): string[] {
   const shifedColors = shiftHue(adjustedColors);
 
   return [...adjustedColors, ...shifedColors];
-} //Generates a set of colors based on input colors, ensuring they meet a minimum contrast ratio.
+}
 
 export function shiftHue(colors: string[]): string[] {
   const shiftedColors = [];

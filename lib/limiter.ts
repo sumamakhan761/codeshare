@@ -2,8 +2,8 @@ import { LRUCache } from "lru-cache";
 
 export function limiter() {
   const tokenCache = new LRUCache({
-    ttl: 120 * 1000,//expiry time 120 sec
-    max: 100,//Chance hold max 100 entries
+    ttl: 120 * 1000,
+    max: 100,
   });
 
   return {
@@ -31,7 +31,3 @@ export function limiter() {
     },
   };
 }
-
-// The limiter function uses LRUCache to track token requests and  a rate limit.
-// If a token exceeds its limit, further requests are blocked until the token expires.
-// It handles rate-limiting efficiently using an in-memory cache with TTL and max capacity.
