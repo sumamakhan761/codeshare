@@ -9,4 +9,3 @@ export function debounce(func: Function, wait: number) {
     }, wait);
   };
 }
-// The debounce function delays the execution of a given function (func) until after a specified time (wait) has passed since the last call. If the function is called again before the timer ends, the previous timer is cleared and a new one starts.

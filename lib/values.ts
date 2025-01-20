@@ -3,7 +3,7 @@ import { SUPPORTED_LANGUAGES } from "./languages";
 import { SUPPORTED_THEMES } from "./themes";
 import { AppState, AppStatus } from "./types";
 
-export const BASE_FONT_SIZES: string[] = ["12", "14", "16", "18"];
+export const BASE_FONT_SIZES: string[] = ["12", "14", "16" , "18"];
 
 export const BASE_PADDING_VALUES: string[] = ["16", "32", "64", "128"];
 
