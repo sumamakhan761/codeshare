@@ -207,7 +207,7 @@ export default function Help() {
                     >
                       <span>{label}</span>
                       <span>
-                        <Kbd keys={...kbd}/>
+                       <Kbd keys={kbd} />
                       </span>
                     </div>
                   ))}
